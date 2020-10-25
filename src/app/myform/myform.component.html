@@ -1,0 +1,14 @@
+<p>myform works!</p>
+<br/>
+<input [(ngModel)]="fname"/>
+<br/><br/>
+<input [(ngModel)]="lname" />
+<br/><br/>
+<input [(ngModel)]="saddress" />
+<br/><br/>
+<div class="ui-grid-col-4">
+    <span>Phone Ext</span>
+  </div>
+  <div class="ui-grid-col-8">
+    <p-inputMask mask="(999) 999-9999? x99999" [(ngModel)]="val5" placeholder="(999) 999-9999? x99999"></p-inputMask>
+  </div>

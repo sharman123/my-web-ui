@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "my-web-ui"
+    }
+  },
+  "defaultProject": "my-web-ui",
+  "cli": {
+    "analytics": false
+  }
 }
