@@ -1,14 +1,88 @@
-<p>myform works!</p>
-<br/>
-<input [(ngModel)]="fname"/>
-<br/><br/>
-<input [(ngModel)]="lname" />
-<br/><br/>
-<input [(ngModel)]="saddress" />
-<br/><br/>
-<div class="ui-grid-col-4">
-    <span>Phone Ext</span>
+<!DOCTYPE html>
+<html>
+<title>My Web Project</title>
+<link rel="stylesheet" href="myform.component.css">
+<meta charset="UTF-8">
+<body>
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>Survey Form-ant</b></h1>
+  <h2>Welcome to the updated Student Survey for <span class="w3-tag">CS Department</span></h2>
+</header>
+<form #student = "ngForm" ngNativeValidate (ngSubmit) = "onClickSubmit(student.value)">
+<div class ="txtField" >
+  <label for="fName">First name:</label><br>
+    <input type="text" class="medtextfields" id="fName" name="fName" required ngModel>
   </div>
-  <div class="ui-grid-col-8">
-    <p-inputMask mask="(999) 999-9999? x99999" [(ngModel)]="val5" placeholder="(999) 999-9999? x99999"></p-inputMask>
+   <div  class ="txtField">
+   <label for="lName">Last name:</label><br>
+  <input type="text" class="medtextfields" id="lName" name="lName" required ngModel >
   </div>
+  <div  class ="txtField">
+  <label for="streetAddress">Street address:</label><br>
+  <input type="text" class="medtextfields" id="streetAddress" name="streetAddress" required ngModel >
+  </div>
+  <div  class ="txtField">
+  <label for="city">city:</label><br>
+  <input type="text" class="smalltextfields" id="city" name="city" required ngModel >
+  </div>
+  <div  class ="txtField">
+  <label for="state">State:</label><br>
+  <input type="text" class="smalltextfields" id="state" name="state" required ngModel ><br><br>
+  </div>
+  
+  <div  class ="txtField">
+  <label for="zipcode">Zip Code:</label><br>
+  <input type="number" class="smalltextfields" id="zipcode" name="zipcode" required ngModel ><br><br>
+  </div>
+  <div  class ="txtField">
+  <label for="phonenumber">Phone number:</label><br>
+  <input type="tel" class="smalltextfields" id="phonenumber" name="phonenumber" required ngModel ><br><br>
+  </div>
+  <div  class ="txtField">
+  <label for="email">Email Address:</label><br>
+  <input type="email" class="medtextfields" id="email" name="email" required ngModel ><br><br>
+  </div>
+  <div  class ="txtField">
+  <label for="surveydate">Date of survey:</label><br>
+  <input type="date"  class="medtextfields" id="surveydate" name="surveydate" required ngModel ><br><br>
+  </div>
+  <h2>Please indicate what you liked most about the campus</h2>
+  <input type="checkbox" id="students" name="students" ngModel>
+  <label for="students"> Students</label><br>
+  <input type="checkbox" id="location" name="location" ngModel>
+  <label for="location"> Location</label><br>
+  <input type="checkbox" id="campus" name="campus" ngModel>
+  <label for="campus"> Campus</label><br>
+  <input type="checkbox" id="atmosphere" name="atmosphere" ngModel>
+  <label for="atmosphere"> Atmosphere</label><br>
+  <input type="checkbox" id="rooms" name="rooms" ngModel>
+  <label for="rooms"> Dorm rooms</label><br>
+  <input type="checkbox" id="sports" name="sports" ngModel>
+  <label for="sports"> Sports</label>
+  <h2>Please indicate how you became interested in the university</h2>
+  <input type="radio" value="friends" id="friends" name="howYouHeard" ngModel>
+  <label for="friends">Friends</label><br>
+  <input type="radio" value="Television" id="television" name="howYouHeard" ngModel >
+  <label for="television">Television</label><br>
+  <input type="radio" value="internet" id = "internet" name="howYouHeard" ngModel >
+  <label for="internet">Internet</label><br>
+  <input type="radio" value="other" id="other" name="howYouHeard" ngModel >
+  <label for="other">Other</label><br><br>
+    <h2>Likelihood of you recommending this school to other prospective students</h2>
+    <select id = "recommendation" name="refer" ngModel>
+      <option value = "1">Very Likely</option>
+      <option value = "2">Likely</option>
+      <option value = "3">Unlikely</option>
+    </select>
+  <h2>Please enter at least ten comma separated numbers ranging from 1 through 100 in the Raffle field</h2>
+  <label for="rafflenumbers" name="raffle" ngmodel>Raffle:</label><br>
+  <input type="text" class="widetextfields" id="rafflenumbers" name="rafflenumbers" ngModel><br><br>
+  <label for="comments" name="feedback" ngmodel>Additional comments:</label><br>
+  <textarea type="text" class="commentstextfields" id="comments" name="comments" placeholder="please enter yout comments" ngModel></textarea><br>
+  <input type="submit" class="button" >
+  <input type="reset" class = "button" value="Cancel">
+  
+</form>
+</body>
+</html>

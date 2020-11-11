@@ -1,1 +1,20 @@
-<p>all-forms works!</p>
+<body>
+  <h1><b>List of all surveys:</b></h1>
+    <div *ngFor = "let record of resultData">
+      <h5><b>First name:</b>  {{ record.fName }},
+        <b>Last Name:</b>  {{ record.lName }}
+        <b>Street Address:</b>  {{ record.streetAddress }},
+        <b>City:</b>  {{ record.city }},
+        <b>State:</b>  {{ record.state }},
+        <b>Zip Code:</b>  {{ record.zipcode }},
+        <b>Phone Number:</b>  {{ record.phonenumber }}, 
+        <b>Email Address:</b>  {{ record.email }},
+        <b>Date of survey:</b>  {{ record.surveydate }}, 
+        <b>Most liked  about campus:</b>  {{ record.likereasons }}, 
+        <b>how you became interested in the university:</b>  {{ record.howYouHeard }}, 
+        <b>Likelihood of you recommending this school:</b>  {{ record.recommendation }},
+        <b>Raffle:</b>  {{ record.rafflenumbers }},
+        <b>Additional comments:</b>  {{ record.comments }},
+      </h5>
+    </div>
+</body>
