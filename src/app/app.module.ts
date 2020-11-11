@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { AllFormsComponent } from './all-forms/all-forms.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 //import { SurveyService } from './Survey.service';
 
 @NgModule({
@@ -34,7 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
       }
     ])
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
