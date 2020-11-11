@@ -9,8 +9,8 @@ RUN cd /app && npm run build
 
 # Stage 2
 FROM nginx:alpine
+COPY nginx.conf /etc/nginx/nginx.conf
+
 ## Remove default nginx website
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build-step /app/dist /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
