@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 import { AllFormsComponent } from './all-forms/all-forms.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { SurveyService } from './Survey.service';
+//import { SurveyService } from './Survey.service';
 
 @NgModule({
   declarations: [

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { SurveyService } from '../Survey.service';
+//import { SurveyService } from '../Survey.service';
 
 @Component({
   selector: 'app-all-forms',
