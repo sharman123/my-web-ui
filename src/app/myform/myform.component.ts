@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { SurveyService } from '../Survey.service';
+//import { SurveyService } from '../Survey.service';
 
 @Component({
   selector: 'app-myform',
@@ -12,7 +12,7 @@ export class MyformComponent implements OnInit {
   fname: string; lname: string; saddress: string; city: string; state: string; zip: string; phone: string; email: string; 
   sdate: Date; likeness: String; 
 
-  constructor(private svc: SurveyService, private http: HttpClient) {
+  constructor(private http: HttpClient) {
     
    }
 

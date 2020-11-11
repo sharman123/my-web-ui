@@ -14,7 +14,7 @@ export class SurveyService {
     this.http.post<any>('http://35.236.244.185/HW/webresources/surveys//create/', body, { headers }).subscribe(data => {
       console.log("data", data)
     });
-    return this.http.post('http://35.236.244.185/HW/webresources/surveys/create/')
+  //  return this.http.post('http://35.236.244.185/HW/webresources/surveys/create/')
   }
  
 
