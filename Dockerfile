@@ -14,7 +14,6 @@ COPY nginx.conf /etc/nginx/nginx.conf
 ## Remove default nginx website
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build-step /app/dist /usr/share/nginx/html
-RUN cd /usr/share/nginx
-RUN chown -R nginx:nginx
-RUN chmod 755 /usr/share/nginx/*
-RUN chmod 755 /usr/share/nginx/html/*
+#RUN cd /usr/share/nginx/html
+RUN chown nginx:nginx /usr/share/nginx/html/*
+#RUN chmod 755 /usr/share/nginx/html/*
