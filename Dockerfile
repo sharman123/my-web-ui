@@ -17,5 +17,5 @@ COPY --from=build-step /app/dist/out/ /usr/share/nginx/html
 #RUN cd /usr/share/nginx/html
 #RUN chown nginx:nginx /usr/share/nginx/html/*
 #RUN chmod 755 /usr/share/nginx/html/*
-COPY nginx.conf /etc/nginx/nginx.conf
+#COPY nginx.conf /etc/nginx/nginx.conf
 #COPY nginx.conf /etc/nginx//conf.d/default.conf
